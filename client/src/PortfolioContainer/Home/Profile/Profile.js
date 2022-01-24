@@ -23,7 +23,8 @@ function Profile() {
           <div className="profile-details-name">
             <span className="primary-text">
               {" "}
-              Hello, I'M <span className="highlighted-text">Dumie Brown</span>
+              Hello, I'm{" "}
+              <span className="highlighted-text">Dumisani Brown Kaunda</span>
             </span>
           </div>
           <div className="profile-details-role">
