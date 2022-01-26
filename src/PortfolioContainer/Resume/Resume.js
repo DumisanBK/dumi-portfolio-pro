@@ -56,12 +56,10 @@ const Resume = (props) => {
     { skill: "JavaScript", ratingPercentage: 85 },
     { skill: "React JS", ratingPercentage: 85 },
     { skill: "React Native", ratingPercentage: 85 },
-    { skill: "Express JS", ratingPercentage: 89 },
-    { skill: "Node JS", ratingPercentage: 89 },
-    { skill: "Mongo Db", ratingPercentage: 70 },
-    { skill: "Core Java", ratingPercentage: 80 },
-    { skill: "HTML", ratingPercentage: 80 },
-    { skill: "CSS", ratingPercentage: 80 },
+    { skill: "C#", ratingPercentage: 89 },
+    { skill: "PHP", ratingPercentage: 89 },
+    { skill: "WordPress", ratingPercentage: 70 },
+    { skill: "SQL", ratingPercentage: 80 },
   ];
 
   const projectsDetails = [
@@ -231,7 +229,11 @@ const Resume = (props) => {
         }
         key={index}
       >
-        <img className="bullet-logo" src={bullet.logoSrc} alt="B" />
+        <img
+          className="bullet-logo"
+          src={require(`../../assets/Resume/${bullet.logoSrc}`).default}
+          alt="B"
+        />
         <span className="bullet-label">{bullet.label}</span>
       </div>
     ));
