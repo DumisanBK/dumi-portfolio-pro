@@ -1,6 +1,7 @@
 import React from "react";
 import Typical from "react-typical";
 import "./Profile.css";
+import ScrollService from "../../../utilities/ScrollService";
 
 function Profile() {
   return (
@@ -17,6 +18,9 @@ function Profile() {
               </a>{" "}
               <a href="https://www.linkedin.com/in/dumisani-brown-kaunda-427292121/">
                 <i className="fa fa-linkedin-square"></i>
+              </a>
+              <a href="https://www.multicsystems.com/">
+                <i className="fa fa-globe"></i>
               </a>
             </div>
           </div>
@@ -51,7 +55,10 @@ function Profile() {
             </span>
           </div>
           <div className="profile-options">
-            <button className="btn primary-btn">
+            <button
+              className="btn primary-btn"
+              onClick={() => ScrollService.scrollHandler.scrollToHireMe()}
+            >
               {""}
               Hire Me{" "}
             </button>
