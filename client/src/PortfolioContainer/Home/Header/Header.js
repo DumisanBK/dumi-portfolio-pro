@@ -4,6 +4,7 @@ import ScrollService from "../../../utilities/ScrollService";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Header.css";
+import Particles from "react-tsparticles";
 
 export default function Header() {
   const [selectedScreen, setSelectedScreen] = useState(0);
@@ -68,6 +69,38 @@ export default function Header() {
         </div>
         <div className="header-logo">
           <span>DBROWN~</span>
+          <Particles
+            params={{
+              particles: {
+                number: {
+                  value: 50,
+                },
+                size: {
+                  value: 3,
+                },
+              },
+              interactivity: {
+                events: {
+                  onhover: {
+                    enable: true,
+                    mode: "repulse",
+                  },
+                },
+              },
+              modes: {
+                polygon: {
+                  distance: 250,
+                  duration: 2,
+                  size: 5,
+                  opacity: 0.4,
+                },
+                repulse: {
+                  distance: 400,
+                  duration: 4,
+                },
+              },
+            }}
+          />
         </div>
         <div
           className={

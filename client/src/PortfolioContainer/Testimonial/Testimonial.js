@@ -64,9 +64,10 @@ export default function Testimonial(props) {
                   <div className="testi-comment">
                     <p>
                       <i className="fa fa-quote-left" />
-                      I patronized Ehizeex and when He delivered, I honestly
-                      fell in love with the project He is a very honest guy and
-                      he delivers ontime.
+                      I patronized Dumisani and when he delivered, I honestly
+                      fell in love with the project. He is a very honest guy and
+                      he delivers ontime.Very well thought out and articulate
+                      communication.
                       <i className="fa fa-quote-right" />
                     </p>
                     <ul className="stars list-unstyled">
@@ -89,8 +90,8 @@ export default function Testimonial(props) {
                   </div>
                   <div className="client-info">
                     <img src={lady} alt="no internet connection"></img>
-                    <h5>Daisy Dominic</h5>
-                    <p>CEO InansGlobal</p>
+                    <h5>Shayna Henderson</h5>
+                    <p>Web Administrator LMBLIA</p>
                   </div>
                 </div>
               </div>
@@ -100,9 +101,9 @@ export default function Testimonial(props) {
                   <div className="testi-comment">
                     <p>
                       <i className="fa fa-quote-left" />
-                      It was nice hiring this guy for my e-commerce project.He
-                      delivered even more than i can imagine. I recommend him
-                      for you.
+                      The customer support was everything, from the engagement,
+                      in the decision making of the project up to coming up with
+                      the perfect website project and delivering on time.
                       <i className="fa fa-quote-right" />
                     </p>
                     <ul className="stars list-unstyled">
@@ -125,8 +126,8 @@ export default function Testimonial(props) {
                   </div>
                   <div className="client-info">
                     <img src={mike} alt="no internet connection"></img>
-                    <h5>Mikel</h5>
-                    <p>CEO MikeTech</p>
+                    <h5>Jonathan Assani</h5>
+                    <p>Products Manager</p>
                   </div>
                 </div>
               </div>

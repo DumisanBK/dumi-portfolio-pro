@@ -14,16 +14,17 @@ export default function AboutMe(props) {
 
   const SCREEN_CONSTSANTS = {
     description:
-      "I am Full Stack Developer specialising in different programming languages i.e C#, JavaScript, and PHP just to mention a few. I am currently working at NBS Bank as a Software Developer and specialize in developing Web Applications, APIs and integrating our applications with other 3rd party service providers including water bills, electricity bills, tv and more.The logical extension of my education and work experience is my continued desire to create and re-purpose software to be sleek and powerful. I have an avid desire to code power Apps in languages like JavaScript, C#, Dart and Flutter, React, and more with a view toward making elegant full-stack solutions in application development. ",
+      "I am Full Stack Developer specialising in different programming languages i.e C#, JavaScript, and PHP just to mention a few. I am currently working at NBS Bank PLC as a Software Developer and specialize in developing Web Applications, APIs and integrating our applications with other 3rd party service providers including water bills, electricity bills, tv and more.The logical extension of my education and work experience is my continued desire to create and re-purpose software to be sleek and powerful. I have an avid desire to code power Apps in languages like JavaScript, C#, Dart and Flutter, React, and more with a view toward making elegant full-stack solutions in application development. ",
     highlights: {
       bullets: [
-        "Full Stack web and mobile development",
-        "Interactive Front End as per the design",
-        "React and React Native",
+        "Full Stack Web and Mobile development",
+        "Interactive Front End as per design",
+        "Software Tool development",
         "Building REST API",
-        "Managing database",
+        "Graphic Designing",
+        "WordPress Development",
       ],
-      heading: "Here are a Few Highlights:",
+      heading: "Few Highlights:",
     },
   };
   const renderHighlight = () => {
@@ -50,7 +51,9 @@ export default function AboutMe(props) {
             </span>
             <div className="about-me-highlights">
               <div className="highlight-heading">
-                <span>{SCREEN_CONSTSANTS.highlights.heading}</span>
+                <b>
+                  <span>{SCREEN_CONSTSANTS.highlights.heading}</span>
+                </b>
               </div>
               {renderHighlight()}
             </div>

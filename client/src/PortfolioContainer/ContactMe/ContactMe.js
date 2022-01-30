@@ -17,8 +17,10 @@ export default function ContactMe(props) {
     if (screen.fadeInScreen !== props.id) return;
     Animations.animations.fadeInScreen(props.id);
   };
+
   const fadeInSubscription =
     ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -28,15 +30,13 @@ export default function ContactMe(props) {
   const handleName = (e) => {
     setName(e.target.value);
   };
-
   const handleEmail = (e) => {
     setEmail(e.target.value);
   };
-
   const handleMessage = (e) => {
     setMessage(e.target.value);
   };
-  const handleSubmit = async (e) => {
+  const submitForm = async (e) => {
     e.preventDefault();
     try {
       let data = {
@@ -44,10 +44,8 @@ export default function ContactMe(props) {
         email,
         message,
       };
-
       setBool(true);
-
-      const res = await axios.post("/contact", data);
+      const res = await axios.post(`/contact`, data);
       if (name.length === 0 || email.length === 0 || message.length === 0) {
         setBanner(res.data.msg);
         toast.error(res.data.msg);
@@ -55,7 +53,11 @@ export default function ContactMe(props) {
       } else if (res.status === 200) {
         setBanner(res.data.msg);
         toast.success(res.data.msg);
-        setBool(true);
+        setBool(false);
+
+        setName("");
+        setEmail("");
+        setMessage("");
       }
     } catch (error) {
       console.log(error);
@@ -91,26 +93,41 @@ export default function ContactMe(props) {
             <i className="fa fa-globe"></i>
           </a>
         </div>
-        <h2 className="big-heading"> Enter your details below</h2>
+        <h4>Hey there</h4>
         <div className="back-form">
           <div className="img-back">
-            <h4>Send Your Email Here!</h4>
-            <img src={imgBack} alt="not found" />
+            <img src={imgBack} alt=" not found" />
           </div>
-          <form onSubmit={handleSubmit}>
+
+          <form onSubmit={submitForm}>
             <p>{banner}</p>
             <label htmlFor="name">Name</label>
-            <input type="text" onChange={handleName} value={name} />
+            <input
+              label="name"
+              type="text"
+              onChange={handleName}
+              value={name}
+            />
 
             <label htmlFor="email">Email</label>
-            <input type="email" onChange={handleEmail} value={email} />
+            <input
+              label="email"
+              type="email"
+              onChange={handleEmail}
+              value={email}
+            />
 
             <label htmlFor="message">Message</label>
-            <textarea type="text" onChange={handleMessage} value={message} />
+            <textarea
+              label="message"
+              type="text"
+              onChange={handleMessage}
+              value={message}
+            />
 
             <div className="send-btn">
               <button type="submit">
-                Send
+                send
                 <i className="fa fa-paper-plane" />
                 {bool ? (
                   <b className="load">

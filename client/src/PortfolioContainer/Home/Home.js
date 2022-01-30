@@ -1,8 +1,9 @@
 import React from "react";
-import Footer from "./Footer/Footer";
 import Profile from "./Profile/Profile";
 import "./Home.css";
 import Header from "./Header/Header";
+import Footer from "./Footer/Footer";
+import FooterArrow from "../FooterArrow/FooterArrow";
 
 function Home(props) {
   return (
@@ -10,6 +11,8 @@ function Home(props) {
       <Header />
       <Profile />
       <Footer />
+
+      <FooterArrow />
     </div>
   );
 }

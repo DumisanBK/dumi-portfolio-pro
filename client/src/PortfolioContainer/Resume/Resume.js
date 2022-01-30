@@ -53,13 +53,13 @@ const Resume = (props) => {
 
   //here we have
   const programmingSkillsDetails = [
-    { skill: "JavaScript", ratingPercentage: 85 },
+    { skill: "JavaScript", ratingPercentage: 90 },
+    { skill: "C#", ratingPercentage: 85 },
     { skill: "React JS", ratingPercentage: 85 },
-    { skill: "React Native", ratingPercentage: 85 },
-    { skill: "C#", ratingPercentage: 89 },
-    { skill: "PHP", ratingPercentage: 89 },
-    { skill: "WordPress", ratingPercentage: 70 },
-    { skill: "SQL", ratingPercentage: 80 },
+    { skill: "React Native", ratingPercentage: 80 },
+    { skill: "PHP", ratingPercentage: 80 },
+    { skill: "SQL Server", ratingPercentage: 80 },
+    { skill: "Dart and Flutter", ratingPercentage: 75 },
   ];
 
   const projectsDetails = [
@@ -68,23 +68,23 @@ const Resume = (props) => {
       duration: { fromDate: "2020", toDate: "2021" },
       description:
         "A Personal Portfolio website to showcase all my details and projects at one place.",
-      subHeading: "Technologies Used: React JS, Bootsrap",
+      subHeading:
+        "Technologies Used: React JS, Express JS,Node JS and Bootsrap",
     },
     {
-      title: "Mobile E-shop ",
+      title: "Multicsystems Website ",
       duration: { fromDate: "2020", toDate: "2021" },
       description:
-        "An ecommerce application designed to sell products online wth payment system integration",
-      subHeading:
-        "Technologies Used:  React Native, Mongo DB, Express Js, Node Js, Redux.",
+        "This is a start-up company that i got registered in 2019 that offers various services such web design and development, web and email hosting, domain name registration, mobile development, graphic design and IT consultancy.",
+      subHeading: "Technologies Used:  PHP, MySQL, Bootstrap.",
     },
     {
       title: "Ecommerce Website ",
       duration: { fromDate: "2020", toDate: "2021" },
       description:
-        "Online ecommerce website for showcasing and selling products onlne with payment system integration, both Paypal and Stripe",
+        "Online ecommerce website for showcasing and selling products online with payment system integration using Stripe",
       subHeading:
-        "Technologies Used: Mongo DB, Epress Js, React Js, Node JS, Redux, Bootstrap.",
+        "Technologies Used: C#, Stripe, SQL Server, JavaScript, Bootstrap.",
     },
   ];
 
@@ -138,9 +138,9 @@ const Resume = (props) => {
         <div className="experience-description">
           <span className="resume-description-text">
             - Developed web applications that automate manual processes in the
-            bank and software tools that monitor other systems in the bank that
-            are used for client with the dashboard for managing the products,
-            managing reviews, users, payment etc. .
+            bank and software tools that monitor other systems. Built dashboards
+            that our clients use for managing their products, reviews, users,
+            payment etc..
           </span>
           <br />
           <span className="resume-description-text">
@@ -203,8 +203,8 @@ const Resume = (props) => {
         description="I like to hit the gym every now and then because i like to keep fit and healthy."
       />
       <ResumeHeading
-        heading="Competitive Gaming"
-        description="I like to challenge my reflexes a lot while competing in football games, pushing the rank and having interactive gaming sessions excites me the most."
+        heading="Sports"
+        description="I like to do sports such as basketball, football and pool."
       />
     </div>,
   ];
