@@ -74,8 +74,7 @@ const Resume = (props) => {
     {
       title: "Multicsystems Website ",
       duration: { fromDate: "2020", toDate: "2021" },
-      description:
-        "This is a start-up company that i got registered in 2019 that offers various services such web design and development, web and email hosting, domain name registration, mobile development, graphic design and IT consultancy.",
+      description: `This is a start-up company that i got registered in 2019 that offers various services such web design and development, web and email hosting, domain name registration, mobile development, graphic design and IT consultancy.`,
       subHeading: "Technologies Used:  PHP, MySQL, Bootstrap.",
     },
     {
