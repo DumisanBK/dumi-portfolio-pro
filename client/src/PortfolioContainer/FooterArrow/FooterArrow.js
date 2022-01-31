@@ -4,7 +4,7 @@ export default function FooterArrow() {
   return (
     <div className="scroll-container">
       <button
-        className="bt-scroll"
+        className="btn-scroll"
         onClick={() => ScrollService.scrollHandler.scrollToHome()}
       >
         {""}

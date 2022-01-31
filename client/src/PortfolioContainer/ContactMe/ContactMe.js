@@ -7,10 +7,10 @@ import ScrollService from "../../utilities/ScrollService";
 import Animations from "../../utilities/Animations";
 
 import "./ContactMe.css";
-import Footer from "../Home/Footer/Footer";
 
 import axios from "axios";
 import { toast } from "react-toastify";
+import FooterArrow from "../FooterArrow/FooterArrow";
 
 export default function ContactMe(props) {
   let fadeInScreenHandler = (screen) => {
@@ -45,7 +45,10 @@ export default function ContactMe(props) {
         message,
       };
       setBool(true);
-      const res = await axios.post(`/contact`, data);
+
+      const res = await axios.post(`http://localhost:5000/contact`, data);
+
+      console.log(res.data);
       if (name.length === 0 || email.length === 0 || message.length === 0) {
         setBanner(res.data.msg);
         toast.error(res.data.msg);
@@ -141,7 +144,7 @@ export default function ContactMe(props) {
           </form>
         </div>
       </div>
-      <Footer />
+      <FooterArrow />
     </div>
   );
 }
