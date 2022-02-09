@@ -9,18 +9,14 @@ router.post("/contact", (req, res) => {
     data.email.length === 0 ||
     data.message.length === 0
   ) {
-    return res.json({
-      msg: "Please fill all the fields, I am trying to send the email but the fields are empty",
-    });
+    return res.json({ msg: "Please fill all the fields" });
   }
-
-  console.log(data);
   let smtpTransporter = nodemailer.createTransport({
-    service: "smtp.gmail.com",
+    service: "Gmail",
     port: 465,
     auth: {
-      user: process.env.EMAIL,
-      pass: process.env.PASSWORD,
+      user: "brownkaunda@gmail.com",
+      pass: "Humblebeast13.",
     },
   });
 
@@ -36,11 +32,11 @@ router.post("/contact", (req, res) => {
 
   smtpTransporter.sendMail(mailOptions, (error) => {
     try {
-      if (error) console.log(error);
+      if (error)
+        return res.status(400).json({ msg: "Please fill all the fields" });
       res.status(200).json({ msg: "Thank for contacting Dumisani B Kaunda" });
     } catch (error) {
-      if (error)
-        return res.status(500).json({ msg: "There is a server error" });
+      if (error) return res.status(500).json({ msg: "Thre is a server error" });
     }
   });
 });
