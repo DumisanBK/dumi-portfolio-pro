@@ -7,7 +7,7 @@ export default function FooterArrow() {
         className="bt-scroll"
         onClick={() => ScrollService.scrollHandler.scrollToHome()}
       >
-        {" "}
+        {""}
         <i className="fa fa-arrow-up"></i>
       </button>
     </div>
