@@ -64,10 +64,10 @@ export default function Testimonial(props) {
                   <div className="testi-comment">
                     <p>
                       <i className="fa fa-quote-left" />
-                      I patronized Dumisani and when he delivered, I honestly
-                      fell in love with the project. He is a very honest guy and
-                      he delivers ontime.Very well thought out and articulate
-                      communication.
+                      " The customer support was everything, from the
+                      engagement, in the decision making of the project up to
+                      coming up with the perfect website project and delivering
+                      on time."
                       <i className="fa fa-quote-right" />
                     </p>
                     <ul className="stars list-unstyled">
@@ -90,8 +90,8 @@ export default function Testimonial(props) {
                   </div>
                   <div className="client-info">
                     <img src={lady} alt="no internet connection"></img>
-                    <h5>Shayna Henderson</h5>
-                    <p>Web Administrator LMBLIA</p>
+                    <h5>Jonathan Assani</h5>
+                    <p>Product Manager</p>
                   </div>
                 </div>
               </div>
@@ -163,41 +163,6 @@ export default function Testimonial(props) {
                     <img src={lady} alt="no internet connection"></img>
                     <h5>Daisy Dominic</h5>
                     <p>CEO InansGlobal</p>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-12">
-                <div className="testi-item">
-                  <div className="testi-comment">
-                    <p>
-                      <i className="fa fa-quote-left" />
-                      This guy is incredibly awesome, I hired him and when He
-                      delivered, I honestly fell in love with the project. He is
-                      indeed a great guy,
-                      <i className="fa fa-quote-right" />
-                    </p>
-                    <ul className="stars list-unstyled">
-                      <li>
-                        <i className="fa fa-star" />
-                      </li>
-                      <li>
-                        <i className="fa fa-star" />
-                      </li>
-                      <li>
-                        <i className="fa fa-star" />
-                      </li>
-                      <li>
-                        <i className="fa fa-star-half-alt" />
-                      </li>
-                      <li>
-                        <i className="fa fa-star" />
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="client-info">
-                    <img src={man} alt="no internet connection"></img>
-                    <h5>John Smith</h5>
-                    <p>Bnaker</p>
                   </div>
                 </div>
               </div>

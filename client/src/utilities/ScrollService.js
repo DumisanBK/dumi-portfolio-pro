@@ -1,6 +1,5 @@
 import { TOTAL_SCREENS } from "./commonUtil";
 import { Subject } from "rxjs";
-import { object } from "prop-types";
 
 export default class ScrollService {
   static scrollHandler = new ScrollService();
@@ -35,6 +34,7 @@ export default class ScrollService {
     switch (type) {
       case "partial":
         return partiallyVisible;
+
       case "complete":
         return completelyVisible;
 

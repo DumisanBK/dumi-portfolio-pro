@@ -7,10 +7,10 @@ import ScrollService from "../../utilities/ScrollService";
 import Animations from "../../utilities/Animations";
 
 import "./ContactMe.css";
-import Footer from "../Home/Footer/Footer";
 
 import axios from "axios";
 import { toast } from "react-toastify";
+import FooterArrow from "../FooterArrow/FooterArrow";
 
 export default function ContactMe(props) {
   let fadeInScreenHandler = (screen) => {
@@ -141,7 +141,7 @@ export default function ContactMe(props) {
           </form>
         </div>
       </div>
-      <Footer />
+      <FooterArrow />
     </div>
   );
 }
