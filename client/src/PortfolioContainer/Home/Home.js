@@ -6,7 +6,7 @@ import Footer from "./Footer/Footer";
 
 function Home(props) {
   return (
-    <div className="home-container">
+    <div className="home-container" id={props.id || ""}>
       <Header />
       <Profile />
       <Footer />

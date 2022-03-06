@@ -17,6 +17,8 @@ export default class ScrollService {
   };
   scrollToHome = () => {
     let homeScreen = document.getElementById("Home");
+
+    console.log(homeScreen);
     if (!homeScreen) return;
     homeScreen.scrollIntoView({ behavior: "smooth" });
   };
@@ -45,7 +47,8 @@ export default class ScrollService {
 
   checkCurrentScreenUnderViewport = (event) => {
     if (!event || Object.keys(event).length < 1) return;
-    for (const screen of TOTAL_SCREENS) {
+
+    for (let screen of TOTAL_SCREENS) {
       let screenFromDOM = document.getElementById(screen.screen_name);
       if (!screenFromDOM) continue;
 
@@ -54,14 +57,17 @@ export default class ScrollService {
 
       if (fullyVisible || partiallyVisible) {
         if (partiallyVisible && !screen.alreadyRendered) {
+          //BROADCAST FADE IN EFFECT
           ScrollService.currentScreenFadeIn.next({
             fadeInScreen: screen.screen_name,
           });
           screen["alreadyRendered"] = true;
           break;
         }
+
         if (fullyVisible) {
-          ScrollService.currentScreenBroadCaster.next({
+          // BROADCAST SCREEN NAME
+          ScrollService.currentScreenBroadcaster.next({
             screenInView: screen.screen_name,
           });
           break;
